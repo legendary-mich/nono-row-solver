@@ -1,0 +1,2 @@
+--out spec.js
+spec/all_spec.ts

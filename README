@@ -1,0 +1,19 @@
+Nono Row Solver is a tool used to solve a single row in a popular game called
+Nonogram. It is written in typescript, and compiled to javascript (main.js).
+
+Usage: Create a row's description array "var description = [2, 2, 3];" Values 
+should be greater than 0. The array itself may be empty. Create a row with 
+appropriate values "var row = [-3,-3,-3,-2,-2,-3,-1];". Values inside a row 
+should match those in a Cell_State enum , which you can find inside an 
+src/interfaces.ts. When you finish, create a Row_Solver "var solver = new 
+Row_Solver();", and call solve method filling it with Bounded_Arrays 
+"solver.solve(new Bounded_Array(description), new Bounded_Array(row));".  That's 
+all. The solver will modify delivered arrays, and will return one of a Result
+enum values (changed, unchanged or error).
+
+Sample:
+var description = [2, 2, 3];
+var row = [-3,-3,-3,-2,-2,-3,-1];
+var solver = new Row_Solver();
+var result = solver.solve(new Bounded_Array(description),
+                          new Bounded_Array(row));
